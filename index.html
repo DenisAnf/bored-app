@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<meta name="Author" content="Denis A">
+	<meta name="Copyright" content="Denis A">
+	<meta name="Address" content="Санкт-Петербург">
+
+	<meta property="og:locale" content="ru_RU">
+	<meta property="og:type" content="article">
+	<meta property="og:site_name" content="Movies List">
+	<meta property="og:title" content="Список фильмов">
+	<meta property="og:description" content="Создай свой список фильмов">
+	<meta property="og:image" content="https://raw.githubusercontent.com/DenisAnf/movies-app/main/resourses/img/WatchMovies.png">
+	<meta property="og:url" content="https://denisanf.github.io/movies-app">
+	
+	
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="Denis A">
+	<meta name="twitter:title" content="Список фильмов">
+	<meta name="twitter:description" content="Создай свой список фильмов">
+	<meta name="twitter:image" content="https://raw.githubusercontent.com/DenisAnf/movies-app/main/resourses/img/WatchMovies.png">
+
+	<!--Политика 'interest-cohort' разрешений позволяет сайту заявить, что он не хочет быть включенным в список сайтов, на которых Google тестирует свою технологию FLoC (замена файлов cookie)
+	<meta http-equiv="Permissions-Policy" content="interest-cohort=()">-->
+
+	<link rel="stylesheet" href="styles/style.css">
+	<title>Список фильмов</title>
+	<link rel="shortcut icon" href="./resourses/img/icon/favicon.ico"/>
+</head>
+<body>
+	<header class="header">
+		<div class="container">
+			<div class="header__wrapper">
+				<h1 class="header__title">Список фильмов</h1>
+				<p class="header__title">2023</p>
+			</div>
+			<h2 class="header__subtitle">Посмотреть</h2>
+		</div>
+	</header>
+
+	<main class="page">
+		<div class="container">
+			<div class="page__wrapper">
+				<section class="receipt">
+					<form action="" class="form">
+						<input type="text" id="filmName" class="form__input" placeholder="Добавить фильм">
+						<button type="button" id="filmAddButton" class="form__addBtn"></button>
+					</form>
+					<div id="filmError" class="receipt__error"></div>
+				</section>
+				<section id="movies" class="movies">
+					<!--<ul class="movies__list">
+						<li class="movies__list-item">
+							<label class="movie">
+								<input type="checkbox" class="movie__checkbox" unchecked>
+								<div class="movie__fakecheckbox"></div>
+								<span class="movie__title">Преследование и убийство Жан-Поля Марата, представленное актерской труппой госпиталя в Шарантоне под руководством	маркиза де Сада</span>
+								<button type="button" class="movie__deleteBtn"></button>
+							</label>
+						</li>
+					</ul>-->
+				</section>
+			</div>
+		</div>
+	</main>
+	
+	<footer class="footer">
+		<div class="footer__telegram">
+			<a target="_blank" href="https://t.me/Denis_Bear_A">@Denis_Bear_A</a>
+		</div>
+		<div class="footer__cr">
+			SC.CODE — 2023
+		</div>
+	</footer>
+	
+	<script src="js/index.js"></script>
+</body>
+</html>
