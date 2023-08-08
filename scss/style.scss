@@ -5,7 +5,6 @@ $fontfamily: "Inter", sans-serif;
 @import "_nullstyle";
 
 body {
-	//height: 100%;
 	width: 100%;
 	font-family: $fontfamily;
 	background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.20) 47.62%);
@@ -19,7 +18,7 @@ body {
 	padding: 0 10px;
 }
 .header {
-	margin-top: 115px;
+	padding-top: 115px;
 
 	&__title {
 		margin-bottom: 66px;
