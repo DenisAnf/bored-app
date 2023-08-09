@@ -19,12 +19,12 @@ const init = () => {
 };
 init();
 
-const disableButtonHandler = () => buttonShowIdea.disabled = true;
+const disableButton = () => buttonShowIdea.disabled = true;
 
-const activeButtonHandler = () => buttonShowIdea.disabled = false;
+const activeButton = () => buttonShowIdea.disabled = false;
 
 const getActivity = () => {
-	disableButtonHandler();
+	disableButton();
 	//body.style.background = BACKGROUND_WITHOUT_IDEA;
 	ideaNode.textContent = IDEA_FOR_LOAD_TIME_VALUE;
 	
@@ -33,7 +33,7 @@ const getActivity = () => {
 		.then(response => {
 			if (!response.ok) {
 				ideaNode.textContent = `Ошибка загруprи из API: ${response.status}`;
-				activeButtonHandler();
+				activeButton();
 			};
 			return response.json();
 		})
@@ -42,18 +42,18 @@ const getActivity = () => {
 			const idea = data.activity;
 			if (typeof idea !== 'string') {
 				ideaNode.textContent = 'Почему-то API вернул не строку...';
-				activeButtonHandler();
+				activeButton();
 				return;
 			}
 			ideaNode.textContent = idea;
 			questionNode.textContent = ANSWER_INITION_VALUE;
 			body.style.background = BACKGROUND_WITH_IDEA;
-			activeButtonHandler();
+			activeButton();
 		})
 	
 		.catch(error => {
 			ideaNode.textContent = `Ошибка: ${error.message}`;
-			activeButtonHandler();
+			activeButton();
 		})
 };
 
