@@ -92,7 +92,6 @@ h1, h2, h3, h4, h5, h6 {
 body {
   width: 100%;
   font-family: "Inter", sans-serif;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 47.62%);
   color: black;
   overflow-wrap: anywhere;
 }
@@ -115,6 +114,10 @@ body {
 }
 
 .activity__idea {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 144px;
   margin-bottom: 94px;
   text-align: center;
   font-size: 40px;
@@ -124,10 +127,20 @@ body {
   width: 100%;
   padding: 10px;
   background-color: #0094FF;
+  border: 1px solid #0094FF;
   text-align: center;
   font-size: 32px;
   line-height: 40px;
   color: white;
+}
+.activity__go:hover {
+  border: 1px solid black;
+}
+.activity__go:disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+  background-color: grey;
+  border: 1px solid grey;
 }
 
 .footer {
