@@ -25,7 +25,7 @@ const activeButtonHandler = () => buttonShowIdea.disabled = false;
 
 const getIdeaActivityHandlerFromApi = () => {
 	disableButtonHandler();
-	body.style.background = BACKGROUND_WITHOUT_IDEA;
+	//body.style.background = BACKGROUND_WITHOUT_IDEA;
 	ideaNode.textContent = IDEA_FOR_LOAD_TIME_VALUE;
 	
 	fetch(ApiLink)
