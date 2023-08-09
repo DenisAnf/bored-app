@@ -23,7 +23,7 @@ const disableButtonHandler = () => buttonShowIdea.disabled = true;
 
 const activeButtonHandler = () => buttonShowIdea.disabled = false;
 
-const getIdeaActivityHandlerFromApi = () => {
+const getActivity = () => {
 	disableButtonHandler();
 	//body.style.background = BACKGROUND_WITHOUT_IDEA;
 	ideaNode.textContent = IDEA_FOR_LOAD_TIME_VALUE;
@@ -41,7 +41,7 @@ const getIdeaActivityHandlerFromApi = () => {
 		.then(data => {
 			const idea = data.activity;
 			if (typeof idea !== 'string') {
-				ideaNode.textContent = 'Почему API вернул не строку...';
+				ideaNode.textContent = 'Почему-то API вернул не строку...';
 				activeButtonHandler();
 				return;
 			}
@@ -57,4 +57,4 @@ const getIdeaActivityHandlerFromApi = () => {
 		})
 };
 
-buttonShowIdea.addEventListener('click', getIdeaActivityHandlerFromApi);
+buttonShowIdea.addEventListener('click', getActivity);
